@@ -1,58 +1,128 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hasanat Tracker (Tazbih) - Spiritual Habit & Amal Tracker
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Hasanat Tracker is a premium, feature-rich Islamic Habit Tracker and Tasbih Counter web application designed to help Muslims monitor and improve their daily worship, Quran recitations, habits, and reflections. Built using the modern TALL stack (Tailwind, Alpine.js, Laravel, Livewire), it offers a fast, fluid SPA experience with offline-first capabilities for guests and secure database storage for authenticated users.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🌟 Key Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. Daily Goals Dashboard
+* Set customized target numbers for daily **Salah (Prayers)**, **Quran Recitation (Pages)**, and **Zikirs** (custom or preset).
+* Real-time fractional progress indicators (e.g., completing 3 out of 5 prayers shows 60% completion).
+* Dynamic fallback system that estimates progress based on recorded activities if no custom goals are set.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 2. Comprehensive Worship Analytics & Statistics
+* **GitHub-Style Contribution Heatmap**: Visualizes daily spiritual activity levels.
+* **Range-Based Analytics**: Filter stats across predefined ranges (Today, Yesterday, Last 7 Days, Last 30 Days, Last Year) or set a custom start/end date span.
+* Integrated metrics tracking Salah statuses, Quran pages read, habits logged, and total zikirs performed.
 
-## Learning Laravel
+### 3. Spiritual Diary & Reflection Journal
+* Premium mood selector with 5 distinct states: Vibrant, Peaceful, Grateful, Tired, and Low.
+* Instant background auto-save triggered debounced as you type (1 second delay), on textarea blur, mood changes, and quick prompt selections.
+* **Quick Prompts Templates**: Outlines for Gratitude, Growth, and Repentance.
+* Vertical reflections timeline showing history logs.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 4. Interactive Tasbih Counter
+* Audio feedback using synthesized frequencies.
+* Haptic feedback vibrations (for mobile devices).
+* Target completion rings and loop targets.
+* Add custom Zikirs with custom Bangla/English names, Arabic script, targets, and icons.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 5. Amal Alert Reminders
+* Offline-first alerts using the Web Audio API (synthesizes chime, echo, and arpeggio ringtones locally).
+* Customized timers for Morning, Afternoon, and Evening slots.
+* Volume controls and test audio trigger button.
+* **Snooze Support**: Postpone reminders by 10 minutes.
+* Inspiring Quranic verses and Hadith citations displayed inside notifications.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### 6. Premium Admin Control Center (Dashboard)
+* **High-Security Gatekeeping**: Access restricted to the admin email `omarfaruuuk@gmail.com` using strict middleware validation.
+* **Live Traffic Analytics**: Graph plotting page views and visitor trends for the last 7 days using Chart.js.
+* **User Accounts Board**: Searchable and paginated table showing online status, registration dates, and worship statistics.
+* **Spiritual Profile Auditor**: Detailed modal showing a user's logged history across all activities.
+* **Feature Access Permissions**: Turn off/on specific modules (Salah Tracker, Quran Tracker, Tasbih Counter, Habit Tracker, Journal, Daily Goals) for any user directly from the dashboard with instant cache invalidation.
+* Account deletion controls to remove inactive users.
 
-## Agentic Development
+### 7. Guest Mode & Local Syncing
+* Full tracking capability for guest users using local browser storage (`localStorage`).
+* One-click migration system: Automatically uploads guest progress and merges it with the database when registering or logging in.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### 8. Premium UI/UX & Aesthetics
+* Glassmorphic designs, vibrant gradients, and micro-animations.
+* Instant Dark Mode with class-based toggling and an inline script that prevents "light flashes" on page load.
+* Single Page Application (SPA) transitions powered by Livewire's `wire:navigate`.
 
+---
+
+## 🛠️ Technology Stack
+
+* **Backend Framework**: Laravel 11.x
+* **Frontend Reactive Layer**: Livewire 3.x & Alpine.js
+* **Styles**: Tailwind CSS (DarkMode: class)
+* **Charts & Analytics**: Chart.js
+* **Database**: MySQL / SQLite (Database driver-agnostic query design)
+
+---
+
+## 🚀 Setup & Installation
+
+Follow these steps to run the project locally:
+
+### 1. Prerequisites
+Ensure you have the following installed:
+* PHP >= 8.3
+* Composer
+* Node.js & npm
+
+### 2. Installation Steps
+Clone the repository:
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/omarfaruqueee/Tazbih.git
+cd Tazbih
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Install Composer dependencies:
+```bash
+composer install
+```
 
-## Contributing
+Install npm dependencies:
+```bash
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Copy the environment file:
+```bash
+cp .env.example .env
+```
 
-## Code of Conduct
+Generate the application key:
+```bash
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Configure your `.env` database connection parameters (e.g., MySQL connection to your local schema).
 
-## Security Vulnerabilities
+Run the database migrations:
+```bash
+php artisan migrate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Compile assets using Vite:
+```bash
+npm run build # or "npm run dev" for development
+```
 
-## License
+Start the local server:
+```bash
+php artisan serve
+```
+Access the application at `http://localhost:8000`.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🔒 Security & Admin Access
+The Admin Control Center is located at `/admin/dashboard`. To access the panel:
+1. Log in with the email `omarfaruuuk@gmail.com`.
+2. Access the `/admin/dashboard` URL.
+3. Access is strictly blocked for any other user roles (HTTP 403).
