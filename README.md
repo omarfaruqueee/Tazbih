@@ -4,6 +4,16 @@ Hasanat Tracker is a premium, feature-rich Islamic Habit Tracker and Tasbih Coun
 
 ---
 
+## 📸 Screenshots
+
+Here are some previews of the Hasanat Tracker application:
+
+| Home Dashboard | Records & Analytics | Settings & Reminders | Daily Goals Configuration |
+|---|---|---|---|
+| ![Home](public/screenshots/home_screenshot.png) | ![Records](public/screenshots/records_screenshot.png) | ![Settings](public/screenshots/settings_screenshot.png) | ![Daily Goals](public/screenshots/daily_goals.png) |
+
+---
+
 ## 🌟 Key Features
 
 ### 1. Daily Goals Dashboard
