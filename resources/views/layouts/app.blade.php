@@ -199,8 +199,6 @@
 
         @livewireScripts
 
-        <!-- Global Prayer Lock Screen Overlay -->
-        <livewire:prayer-lock-overlay />
 
         <!-- Global In-App Alert Popup Modal -->
         <div x-data="globalNotificationApp()" 
